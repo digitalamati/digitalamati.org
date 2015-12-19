@@ -1,0 +1,204 @@
+@font-face {
+	font-family: 'NewBaskervilleStd-Roman';
+	src: url('../webfont/NewBaskervilleStd-Roman.eot?#iefix') format('embedded-opentype'),
+	     url('../webfont/NewBaskervilleStd-Roman.woff') format('woff'), url('../webfont/NewBaskervilleStd-Roman.svg#NewBaskervilleStd-Roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	font-family: 'NewBaskervilleStd-Roman', Times;
+	-webkit-font-smoothing: antialiased;
+}
+h2{
+	font-size: 28px;
+}
+p{
+        text-align: justify;
+	font-size: 18px;
+}
+a, a:hover{
+	text-decoration: none;
+	color: #382929;
+}
+.italic{
+	font-style: italic;
+}
+.fine-print{
+	font-size: 16px;
+}
+textarea:focus, input:focus{
+    outline: 0;
+    text-decoration: none;
+}
+input.email{
+	width: 54%;
+	font-size: 18px;
+	display: inline-block;
+	height: 60px;
+	background-color: #e5e1d8;
+	color: #382929;
+  	border: 3px solid #382929;
+	text-align: left;
+	line-height: 50px;
+	padding: 0 20px;
+}
+input.email:hover{
+	background-color: #fff;
+}
+.container{
+	padding: 20px;
+}
+.photo{
+	position: relative;
+	left: 20px;
+}
+.button {
+	font-size: 18px;
+	display: inline-block;
+	height: 60px;
+	background-color: #382929;
+	color: #e5e1d8;
+	border: 3px solid #382929;
+	line-height: 55px;
+	padding: 0 18px;
+}
+.button:hover{
+	color: #fff;
+}
+.button-light {
+	font-size: 18px;
+	display: inline-block;
+	height: 60px;
+	background-color: #382929;
+	color: #e5e1d8;
+	border: 3px solid #e5e1d8;
+	line-height: 55px;
+	padding: 0 18px;
+}
+.button-light:hover {
+        color: #fff;
+}
+.button:hover{
+	color: #fff;
+}
+.button--signup{
+	margin-left: -4px;
+	padding-left: 45px; 
+	background: url('../images/icon_mail.png') rgb(56, 41, 41);
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-position: 11% 50%;
+}
+.price  {
+	margin-left: -4px;
+	font-size: 18px;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-color: #e5e1d8;
+	color: #382929;
+  	border: 3px solid #382929;
+	text-align: left;
+	line-height: 55px;
+	padding: 0 10px;
+}
+.price:hover{
+	background-color: #fff;
+}
+.fine-print{
+	margin-top: 20px;
+}
+
+.photo{
+	width: 100%;
+}
+.bottom{
+	margin-top: 40px;
+}
+header{
+	background-color: #dbd8d1;
+	color: #382929;
+}
+
+article{
+        overflow: hidden;
+        padding-bottom:10px;
+	background-color: #382929;
+	color: #e5e1d8;
+}
+article a{
+	color: #dbd8d1;
+}
+article a:hover{
+        color: #fff;
+}
+footer{
+        overflow:hidden;
+	background-color: #dbd8d1;
+	color: #382929;
+}
+.xs-hide{
+	display: none;
+}
+.copyright{
+	padding-top: 80px;
+}
+@media (min-width: 768px) {
+	h2{
+		font-size: 36px;
+	}
+	p{
+		font-size: 24px;
+	}
+	.container{
+		padding: 20px;
+	}
+	header .container{
+		background: url('../images/header.png');
+		background-repeat: no-repeat;
+		background-size: 1280px 800px;
+		background-position: center center;
+	}
+	footer .container{
+		background: url('../images/footer.svg');
+		background-repeat: no-repeat;
+		background-size: 1280px 800px;
+		background-position: center center;
+	}
+	.photo{
+		margin-bottom: 40px;
+		display: none;
+	}
+	.logo{
+		margin-bottom: 40px;
+	}
+	.xs-hide{
+		display: block;
+	}
+}
+@media (min-width: 992px) {
+	.md-hide{
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	input.email{
+		font-size: 24px;
+	}
+	.button{
+		font-size: 24px;
+	}
+	.price  {
+		font-size: 24px;
+	}
+	.container{
+		height: 800px;
+		padding: 60px;
+	}
+	p.letter{
+    	font-size: 36px;
+    	line-height: 1.2;
+		padding-bottom:20px;
+	}
+}

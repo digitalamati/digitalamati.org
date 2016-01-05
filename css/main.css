@@ -43,10 +43,15 @@ html {
 
 
 .header-nav {
-	font-size: 20px;
+        margin-left:10px;
+	font-size: 27px;
         margin-bottom: 100px;
         position:absolute;
         z-index:1;
+}
+
+.header-nav .navbar-nav>li {
+
 }
 
 .header-nav .navbar-nav>li>a {
@@ -61,8 +66,8 @@ html {
         background-color:inherit;
 }
 .header-nav .navbar-nav>li>a:hover {
+        font-weight: bold;
         background-color:inherit;
-	color: #fff;
 }
 
 h2{
@@ -103,6 +108,10 @@ input.email:hover{
 }
 .container{
 	padding: 20px;
+}
+.logo{
+        width:75%;
+        max-width:758px;
 }
 .photo{
 	position: relative;
@@ -223,6 +232,7 @@ section.bright{
                 padding-left:5px;
         }
         .header-nav  {
+                margin-left:0px;
                 position:relative;
         }
 	#header .container{

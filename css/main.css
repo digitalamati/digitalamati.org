@@ -9,6 +9,40 @@
 body{
 	font-family: 'NewBaskervilleStd-Roman', Times;
 	-webkit-font-smoothing: antialiased;
+            width: 100%;
+            height: 100%;
+}
+
+.navbar-default {
+	background-color: #382929;
+	border-bottom: 3px solid #dbd8d1;
+}
+
+.navbar-default .navbar-brand{
+	color: #e5e1d8;
+}
+.navbar-default .navbar-brand:hover{
+	color: #fff;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #e5e1d8;
+}
+
+.navbar-default .navbar-nav>li>a:link {
+	color: #e5e1d8;
+}
+.navbar-default .navbar-nav>li>a:visited {
+	color: #e5e1d8;
+}
+.navbar-default .navbar-nav>li>a:hover {
+	color: #fff;
+}
+
+
+
+html {
+    width: 100%;
+    height: 100%;
 }
 h2{
 	font-size: 28px;
@@ -116,24 +150,42 @@ input.email:hover{
 .bottom{
 	margin-top: 40px;
 }
-header{
+#header{
 	background-color: #dbd8d1;
 	color: #382929;
+        height:100%;
+        padding-top:0px;
 }
 
-article{
-        overflow: hidden;
+section{
+        overflow:hidden;
         padding-bottom:10px;
+        padding-top:70px;
+        min-height:100%;
+}
+section .container {
+        height: 100%;
+}
+section.dark a{
+	color: #dbd8d1;
+}
+
+
+section a:hover{
+        color: #fff;
+}
+
+section.dark {
 	background-color: #382929;
 	color: #e5e1d8;
 }
-article a{
-	color: #dbd8d1;
+
+section.bright{
+	background-color: #dbd8d1;
+	color: #382929;
+
 }
-article a:hover{
-        color: #fff;
-}
-footer{
+.dark-article{
         overflow:hidden;
 	background-color: #dbd8d1;
 	color: #382929;
@@ -151,16 +203,13 @@ footer{
 	p{
 		font-size: 24px;
 	}
-	.container{
-		padding: 20px;
-	}
-	header .container{
+	#header .container{
 		background: url('../images/header.png');
 		background-repeat: no-repeat;
 		background-size: 1280px 800px;
 		background-position: center center;
 	}
-	footer .container{
+	.dark-article .container{
 		background: url('../images/footer.svg');
 		background-repeat: no-repeat;
 		background-size: 1280px 800px;
@@ -191,10 +240,6 @@ footer{
 	}
 	.price  {
 		font-size: 24px;
-	}
-	.container{
-		height: 800px;
-		padding: 60px;
 	}
 	p.letter{
     	font-size: 36px;

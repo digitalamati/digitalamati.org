@@ -105,6 +105,9 @@ input.email:hover{
 .container{
 	padding: 20px;
 }
+.logo{
+        width:100%;
+}
 .photo{
 	position: relative;
         z-index:0;
@@ -244,11 +247,6 @@ section.bright{
 }
 #signup-email {
         max-width:50%;
-}
-@media (min-width: 992px) {
-	.md-hide{
-		display: none;
-	}
 }
 @media (min-width: 1200px) {
 	input.email{

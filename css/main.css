@@ -161,7 +161,7 @@ section{
         overflow:hidden;
         padding-bottom:10px;
         padding-top:70px;
-        min-height:100%;
+        height:100%;
 }
 section .container {
         height: 100%;

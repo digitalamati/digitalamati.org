@@ -189,11 +189,12 @@ $(document).ready(function() {
 });
 
 $("#login-ok").click(function(){
-    if ($("#login-email").val() === "mairson@brandeis.edu"){
-    if ($("#login-password").val() === "amati"){
+    if ($("#login-email").val() === "mairson@brandeis.edu" && $("#login-password").val() === "amati"){
         
         $('#myModal').modal('hide');
-    }}
+    } else {
+        alert("wrong email/password!");
+    }
 
 
 });

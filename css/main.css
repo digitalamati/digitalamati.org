@@ -99,8 +99,35 @@ textarea:focus, input:focus{
     outline: 0;
     text-decoration: none;
 }
-input.email{
-	width: 54%;
+
+.login {
+}
+
+.login .modal-content {
+
+	background-color: #e5e1d8;
+  	border: 3px solid #382929;
+        border-radius: 0;
+}
+
+.login .modal-header {
+  	border-bottom: 1px solid #382929;
+}
+.login .modal-body {
+  	border-bottom: 1px solid #382929;
+}
+.login .input-group {
+        width:100%;
+}
+
+.login button {
+        border-radius: 0;
+        
+           
+}
+
+input.text{
+        width: 100%;
 	font-size: 18px;
 	display: inline-block;
 	height: 60px;
@@ -111,8 +138,13 @@ input.email{
 	line-height: 50px;
 	padding: 0 20px;
 }
-input.email:hover{
+input.text:hover{
 	background-color: #fff;
+}
+
+input.email{
+	width: 54%;
+
 }
 .container{
 	padding: 20px;

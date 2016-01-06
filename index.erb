@@ -39,19 +39,20 @@
                     <div class="collapse navbar-collapse" id="navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="#overview">Overview</a></li>
-                            <li><a href="#software">Software</a></li>
+                            <li><a href="#software">Learn</a></li>
                             <li><a href="#staff">Staff</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Console</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Console</a></li>
                             <li><div style="margin-left:15px;margin-top:10px;margin-right:15px;"><!-- Place this tag where you want the button to render. -->
-                                    <a class="github-button" href="https://github.com/digitalamati/digitalamati.org" data-style="mega" aria-label="Star digitalamati/digitalamati.org on GitHub">Contribute</a> </li></div>
+                                    <a class="github-button" href="https://github.com/digitalamati/digitalamati.org" data-style="mega" aria-label="Star digitalamati/digitalamati.org on GitHub">Source</a> </li></div>
                                 <!-- Place this tag right after the last button or just before your close body tag. -->
                                 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
                         </ul>
                     </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+        <%= File.read("html/login_modal.html") %>
         <section id="header" class="bright">
             <div class="container">
                 <div class="row">
@@ -60,10 +61,10 @@
                         <br> 
                         <ul class="nav navbar-nav bright">
                             <li><a href="#overview">Overview</a></li>
-                            <li><a href="#software">Software</a></li>
+                            <li><a href="#software">Learn</a></li>
                             <li><a href="#staff">Staff</a></li>
-                            <li><a href="#staff">Console</a></li>
-                            <li><a href="https://github.com/digitalamati/digitalamati.org">Contribute</a></li>
+                            <li><a id="login-button" href="#" data-toggle="modal" data-target="#myModal">Console</a></li>
+                            <li><a href="https://github.com/digitalamati/digitalamati.org">Source</a></li>
                         </ul>
                     </div>
 
@@ -75,7 +76,7 @@
                     </div>
                     <form id="signup-email">
                         <p>An ongoing project. Sign up to stay posted.</p>
-                        <input class="email" placeholder="name@example.com" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required>
+                        <input class="text email" placeholder="name@example.com" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required>
                         <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class=" button button--signup">
                         <p class="fine-print">You can unsubscribe anytime.</p>
                     </form>
@@ -182,6 +183,19 @@ $(function() {
         }
     }
     });
+});
+$(document).ready(function() {
+    $("#login-button").trigger('click');
+});
+
+$("#login-ok").click(function(){
+    if ($("#login-email").val() === "mairson@brandeis.edu"){
+    if ($("#login-password").val() === "amati"){
+        
+        $('#myModal').modal('hide');
+    }}
+
+
 });
             </script>
     </body>

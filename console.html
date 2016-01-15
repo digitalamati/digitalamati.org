@@ -205,10 +205,13 @@ function makeCorsRequest() {
 }
 makeCorsRequest();
 
+var timeout;
 editor.on('change',function(){
     $('#output').fadeTo("fast",0.5);
-
-    makeCorsRequest();
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){ 
+        makeCorsRequest();
+    }, 1000);
 });
 
         </script>

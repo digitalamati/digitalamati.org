@@ -56,7 +56,7 @@
                     <textarea class="dap-console-code" id="code">
 #lang racket
 
-(require "Geometry-Engine.rkt")
+(require AmatiML)
 
 (elaboration #t)
 (mirroring #t)
@@ -145,15 +145,72 @@ lower-curve middle-curve upper-curve)
                 
                 
                 </div>
-                <div class="col-md-6 dap-console-right-section">
+                <div id="output" class="col-md-6 dap-console-right-section">
                     
-                    <img alt="Example Instrument" src="images/footer.svg" class="img-responsive">
+                    Loading...
                 
                 </div>
             </div>
         </div>
         <script>
-var editor = CodeMirror.fromTextArea(document.getElementById("code"), {lineNumbers: true,lineWrapping:true,scrollbarStyle:null});
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true,
+    lineWrapping:true,
+    scrollbarStyle:null,
+    onChange: function(){console.log("hello");}
+});
+
+// Create the XHR object.
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+// Make the actual CORS request.
+function makeCorsRequest() {
+  // All HTML5 Rocks properties support CORS.
+  var url = 'http://api.digitalamati.org/';
+
+  var xhr = createCORSRequest('POST', url);
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+
+  // Response handlers.
+  xhr.onload = function() {
+    var response = JSON.parse(xhr.responseText);
+    var svg = response.svg;
+    $('#output').html(svg);
+    $('#output').fadeTo("fast",1);
+    //alert('Response from CORS request to ' + url + ': ' + text);
+  };
+
+  xhr.onerror = function() {
+    alert('Woops, there was an error making the request.');
+  };
+
+  xhr.send(editor.getValue());
+}
+makeCorsRequest();
+
+editor.on('change',function(){
+    $('#output').fadeTo("fast",0.5);
+
+    makeCorsRequest();
+});
+
         </script>
     </body>
 </html>

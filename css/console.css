@@ -299,6 +299,7 @@ section.bright{
 	background-color: inherit;
         height:100%;
 	border-top: 3px dashed #382929;
+        overflow:scroll;
 
 }
 .dap-console-right-section > img{

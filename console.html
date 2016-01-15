@@ -198,7 +198,7 @@ function makeCorsRequest() {
   };
 
   xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
+    $('#output').html("Error occured. Trying again...");
   };
 
   xhr.send(editor.getValue());

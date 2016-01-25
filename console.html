@@ -18,6 +18,7 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/mode/scheme/scheme.min.js'></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src='js/bootstrap-notify.min.js'></script>
         <!-- Robots -->
         <meta name="robots" content="index, follow">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -54,8 +55,6 @@
                 <div class="col-md-6 dap-console-left-section">
                 
                     <textarea class="dap-console-code" id="code">
-#lang racket
-
 (require AmatiML)
 
 (elaboration #t)
@@ -180,7 +179,8 @@ function createCORSRequest(method, url) {
 // Make the actual CORS request.
 function makeCorsRequest() {
   // All HTML5 Rocks properties support CORS.
-  var url = 'http://api.digitalamati.org/';
+ var url = 'http://api.digitalamati.org/';
+ // var url = 'http://localhost:8080/';
 
   var xhr = createCORSRequest('POST', url);
   if (!xhr) {
@@ -191,7 +191,20 @@ function makeCorsRequest() {
   // Response handlers.
   xhr.onload = function() {
     var response = JSON.parse(xhr.responseText);
+    //var svg = response.svg.substring(response.svg.indexOf("<"));
     var svg = response.svg;
+    var error_log = response.errors;
+    console.log(error_log);
+    if (error_log.length > 0){
+
+        $.notify({
+            // options
+            message: error_log
+        },{
+            // settings
+            type: 'danger'
+        });
+    }
     $('#output').html(svg);
     $('#output').fadeTo("fast",1);
     //alert('Response from CORS request to ' + url + ': ' + text);

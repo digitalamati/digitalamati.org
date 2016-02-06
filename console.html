@@ -45,13 +45,15 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#" class="glyphicon glyphicon-user" data-toggle="modal" data-target="#myModal"></a></li>
-                            <li><a href="#" class="glyphicon glyphicon-eject"></a></li>
+                            <li><a href="#" class="glyphicon glyphicon-log-out"></a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
         <div class="container-fluid dap-console-main-modal">
             <div class="row dap-console-row">
+
+                            <a id="snap-out" href="#" style="z-index:10;top:10px;left:-30px;" class="glyphicon glyphicon-pushpin"></a>
                 <div class="col-md-6 dap-console-left-section">
                 
                     <textarea class="dap-console-code" id="code">
@@ -226,6 +228,14 @@ editor.on('change',function(){
         makeCorsRequest();
     }, 1000);
 });
+
+$("#snap-out").click(function(){
+    
+    $( ".dap-console-left-section" ).draggable();
+});
+
+$(function() {
+  });
 
         </script>
     </body>

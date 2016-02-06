@@ -49,6 +49,15 @@ html {
         padding-right:10px;
 }
 
+.dap-console-row a:hover {
+	color: #fff;
+        
+}
+.dap-console-row a {
+	color: #382929;
+     text-decoration: none;
+    }
+
 
 
 

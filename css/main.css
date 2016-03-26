@@ -74,7 +74,6 @@ html {
         background-color:inherit;
 }
 .header-nav .navbar-nav>li>a:hover {
-        font-weight: bold;
         background-color:inherit;
 }
 
@@ -150,8 +149,18 @@ input.email{
 	padding: 20px;
 }
 .logo{
-        width:75%;
+    font-family: 'Pinyon Script', cursive;
+        font-size: 5vw;
         max-width:758px;
+        margin-left: 2vw;
+}
+
+.menu {
+        color: white;
+        font-size: 15px;
+        margin-top: 17px;
+        margin-left: 0px;
+
 }
 .photo{
 	position: relative;
@@ -232,11 +241,16 @@ input.email{
 section{
         position:relative;
         overflow-x:hidden;
-        overflow-y:scroll;
+        overflow-y:hidden;
+        font-size: 10px;
         padding-bottom:10px;
         padding-top:70px;
         width:100%;
         height:100%;
+}
+section > div > div > div > p {
+        font-size: 1.5vw
+
 }
 section .container {
         height: 100%;
@@ -277,9 +291,6 @@ section.bright{
         }
 	h2{
 		font-size: 36px;
-	}
-	p{
-		font-size: 24px;
 	}
         .header-nav .navbar-nav>li>a {
                 padding-left:5px;

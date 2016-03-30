@@ -154,12 +154,12 @@ express <i>to each other</i> what we know how to do.
 that are not collinear, what is the unique circle where the points lie
 on the circumference of the circle?
 
-The ``analytic geometry'' way of solving this problem is to plug the
+The "analytic geometry"way of solving this problem is to plug the
 three points into that equation, and you get three 
 equations in three unknowns.  Solve this set of equations, and you get
 the equation for the circle.
 
-The ``Euclidean geometry'' way of solving this problem is to draw,
+The "Euclidean geometry""'' way of solving this problem is to draw,
 with a straightedge and compass, the line <i>pq</i> bisecting <i>p</i> and <i>q</i>,
 where every point on <i>pq</i> is equidistant from <i>p</i> and <i>q</i>; similarly,
 draw the bisecting line <i>qr</i> of points equidistant from <i>q</i> and <i>r</i>.
@@ -198,11 +198,42 @@ visualize doing with a straightedge and compass.
                     <div class="col-md-12">
 
                         <div class="panel panel-default">
-                            <div class="panel-content panel-heading"> AmatiML: the geometry engine </div>
+                            <div class="panel-content panel-heading">  What does this have to do with instrument design? </div>
                             <div class="panel-content panel-body">
                                 <p>
-                                AmatiML is the name we've chosen for our domain specific markup language, designed to serve as an investigative tool to understand more about the history and evolution of instrument design, an inquiry we like to call “computational art history”.  It's an extension of the Scheme programming language with programmable straightedge and compass constructions, and graphical procedures relevant to designing outlines.
-                                </p>
+                                A suite of straightedge
+and compass constructions are what are used to design instrument forms
+based on geometric principles.  An instrument outline is composed of
+an ensemble of circular arcs and straight edges, composed together
+in a precise arrangement.
+<p></p>
+Here's an example: given the <i>green line</i> below (defining the
+width of the lower bout [third] of an instrument outline---see the
+instrument drawing in the lower right, below), and a 
+<i>blue circle</i> defining the lowest curve of the outline, fit a 
+<i>red circle</i> of a fixed radius <tt>r</tt> to be tangent to the green
+line and blue circle.  The red circle defines the lower left flank of
+the instrument outline---see the drawing in the lower right of the
+figure below.  The whole problem then reduces to the following: 
+<i>where is the center of the red circle located?</i>
+<p></p>
+The vertical yellow line defines where the center of the red circle
+has to be, if the red circle is tangent to the green line on the
+right: <tt>(vertical (xshift (point-on L) r))</tt>.  Namely: take a point
+on the green line <tt>L</tt>, shift it over by the red radius <tt>r</tt>,
+and draw the vertical line through that shifted point.
+<p></p>
+The yellow circle defines where the center of the red circle has to
+be, if the red circle is tangent to the interior of the blue circle:
+<tt>(circle (center C) (- R r))</tt>.  Namely: the circle with the same
+center as the blue one, only with a radius of <tt>R-r</tt>.
+<p></p>
+Now, <tt>intersect</tt> the yellow line and the yellow circle: the intersections
+are marked below by two red dots.  The lower, <tt>bottom</tt> one is the solution---the
+center of the red circle.
+
+                                </p><img src="images/Bout.pdf">
+                                
                             </div>
                         </div>
 

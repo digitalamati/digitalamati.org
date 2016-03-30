@@ -33,7 +33,7 @@
                     <div class="container-fluid">
                         <div class="navbar-header">
                             <a class="navbar-brand" href="#">
-                                The Digital Amati Project
+                                <tt>Digital Amati</tt>
                             </a>
                         </div>
                         <ul class="nav navbar-nav navbar-left">
@@ -132,6 +132,111 @@ algorithmic ideas.  <i>Computational thinking</i>
 is an accepted way of understanding complex, constructional processes;
 programming languages---a form of writing---provide a medium for us to
 express <i>to each other</i> what we know how to do. 
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-content panel-heading">  What does this ``geometry engine'' language look like?  How do 
+  you say things in it? </div>
+                            <div class="panel-content panel-body">
+                                <p>
+                                Here is a simple geometric problem: given points <i>p,q,r</i> in the plane
+that are not collinear, what is the unique circle where the points lie
+on the circumference of the circle?
+
+The ``analytic geometry'' way of solving this problem is to plug the
+three points into that equation, and you get three 
+equations in three unknowns.  Solve this set of equations, and you get
+the equation for the circle.
+
+The ``Euclidean geometry'' way of solving this problem is to draw,
+with a straightedge and compass, the line <i>pq</i> bisecting <i>p</i> and <i>q</i>,
+where every point on <i>pq</i> is equidistant from <i>p</i> and <i>q</i>; similarly,
+draw the bisecting line <i>qr</i> of points equidistant from <i>q</i> and <i>r</i>.
+(See the picture below.)  Because <i>p,q,r</i> are not collinear (all on a
+straight line), the lines <i>pq</i> and <i>qr</i> intersect---at a point <i>c</i>
+equidistant from <i>p,q,r</i>.  That's the center of the circle.  The
+radius is the distance from <i>c</i> to <i>p</i>.  There's no <i>
+  calculating</i>---only <i>drawing</i>.
+
+And that's what the code says, in so many words:  let <tt>pq</tt> be the
+bisector of <tt>p</tt> and <tt>q</tt>, similarly <tt>qr</tt> the bisector of
+<tt>q</tt> and <tt>r</tt>.  Let <tt>c</tt> be the intersection of lines {\tt
+  pq</tt> and <tt>qr</tt>; the circle is one with center <tt>c</tt>, and radius
+distance from <tt>c</tt> to <tt>p</tt>.
+
+There's no numerical calculating by the user at the ``front end'', only geometric
+description---writing down what you would do with a straightedge and
+compass.  When the code is run, the ``back end'' numerical
+calculations are done automagically by the geometry engine.  This is
+not deep mathematics, by any means, but in hiding calculation, it lets
+Euclidean specification drive Cartesian computation.  We call this
+``geometric programming'', because you write down with code what you
+visualize doing with a straightedge and compass.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-content panel-heading"> AmatiML: the geometry engine </div>
+                            <div class="panel-content panel-body">
+                                <p>
+                                AmatiML is the name we've chosen for our domain specific markup language, designed to serve as an investigative tool to understand more about the history and evolution of instrument design, an inquiry we like to call “computational art history”.  It's an extension of the Scheme programming language with programmable straightedge and compass constructions, and graphical procedures relevant to designing outlines.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-content panel-heading"> AmatiML: the geometry engine </div>
+                            <div class="panel-content panel-body">
+                                <p>
+                                AmatiML is the name we've chosen for our domain specific markup language, designed to serve as an investigative tool to understand more about the history and evolution of instrument design, an inquiry we like to call “computational art history”.  It's an extension of the Scheme programming language with programmable straightedge and compass constructions, and graphical procedures relevant to designing outlines.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-content panel-heading"> AmatiML: the geometry engine </div>
+                            <div class="panel-content panel-body">
+                                <p>
+                                AmatiML is the name we've chosen for our domain specific markup language, designed to serve as an investigative tool to understand more about the history and evolution of instrument design, an inquiry we like to call “computational art history”.  It's an extension of the Scheme programming language with programmable straightedge and compass constructions, and graphical procedures relevant to designing outlines.
                                 </p>
                             </div>
                         </div>

@@ -1,0 +1,42 @@
+doctype html
+html
+    include html/head.html
+  body
+      include html/header.html
+    a#back-to-top(href='#', title='Back to top') ↑
+    section
+        .container-fluid
+            .row
+                .col-md-6
+                    .panel.panel-default
+                        .panel-content.panel-heading About
+              .panel-body.panel-content
+                  p
+                      b The Digital Amati project
+                  |  seeks to advance understanding of geometric structures that are fundamental in the design of classical string instruments.
+                p
+                    | Like classical architecture, these instruments are founded on geometric principles. We explain seventeenth-century knowledge of these artistic and inherently computational structures in software, using a 
+                  i domain-specific programming language.
+          .col-md-6
+              img.logo(src='images/logo-svg.svg', alt='Digital Amati Project Logo')
+    section
+        .container-fluid
+            .row
+                .col-md-12
+                    .panel.panel-default
+                        .panel-content.panel-heading  The History 
+              .panel-content.panel-body
+                  p
+                      | Andrea Amati (1505-1577), who lived in Cremona, made the world’s first violin. In homage to him, the “Digital Amati” project seeks to advance our understanding of fundamental geometric structures in the design of classical string instruments. Like classical architecture, the design of these instruments is founded on geometric principles. We can bring to light computational aspects of that artistic history, using a new programming language vernacular that describes traditional methods of design.
+    section
+        each val in [1, 2, 3, 4, 5]
+            .container-fluid
+                .row
+                    .col-md-12
+                        .panel.panel-default
+                            .panel-content.panel-heading  The Geometric Engine 
+                  .panel-content.panel-body
+                      p
+                          | AmatiML is a domain specific markup language designed to serve as an investigative tool to understand more about the history and evolution of instrument design, an inquiry we like to call “computational art history”.
+                      p= val
+    include html/login.html

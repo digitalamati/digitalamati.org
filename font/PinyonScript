@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pinyon Script'), local('PinyonScript'), url(https://fonts.gstatic.com/s/pinyonscript/v6/TzghnhfCn7TuE73f-CBQ0DmuEnbvkdF7vjbeHX60E38.ttf) format('truetype');
+}

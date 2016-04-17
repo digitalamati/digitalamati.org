@@ -155,3 +155,7 @@ a:hover {
     opacity: 1;
 }
 
+.small-img {
+        max-width: 50%;
+}
+

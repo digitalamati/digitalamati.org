@@ -30,6 +30,12 @@ body {
         font-size:3vmin;
 }
 
+.faq-expand {
+cursor: pointer;
+
+
+}
+
 .link {
 
     cursor: pointer;

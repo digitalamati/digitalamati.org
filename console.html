@@ -250,7 +250,7 @@ $(function() {
   });
 
 $("#download").click(function(){
-    var blob = new Blob(["Created on THE DIGITAL AMATI PROJECT. All rights reserved. wwwdigitalamati.org", $("#output").html(), "Created on the Digital Amati Project."], {type: "text/plain;charset=utf-8"});
+    var blob = new Blob(["Created on THE DIGITAL AMATI PROJECT. All rights reserved. wwwdigitalamati.org", $("#output").html(), "<br>Created on the Digital Amati Project."], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "instrument.html");
 
 });
